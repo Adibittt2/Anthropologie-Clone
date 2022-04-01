@@ -1,0 +1,48 @@
+
+
+#div_header{
+    width: 100%;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main-left{
+    width: 70%;
+}
+
+.main-right{
+    width: 30%;
+    /* border: 2px solid grey; */
+    padding-left: 10px;
+
+}
+
+
+#main-left4-btn1{
+
+    width: 85%;
+    height: 40px;
+    background-color: gray;
+    color: white;
+    margin-bottom: 30px;
+
+  }
+
+  #main-left4-btn2 {
+      width: 85%;
+      height: 40px;
+      border: 1px solid black;
+  }
+
+  #main-left4-btn2 img{
+      width: 40%;
+      height: 90%;
+      margin-left: 27%;
+      padding: 3px;
+
+  }

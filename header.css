@@ -1,0 +1,118 @@
+
+.header{
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+.header-line1{
+    display: flex;
+    justify-content: end;
+    gap: 4%;
+    padding-right: 10px;
+    height: 50px;
+    /* background-color: aliceblue; */
+}
+
+.header-line2{
+    display: flex;
+    height: 50px;
+    /* background-color: bisque; */
+
+}
+
+.header-line2-left{
+    display: flex;
+    gap: 4%;
+    width:50%;
+    /* background-color:rgb(162, 167, 170); */
+}
+
+.header-line2-right{
+    display: flex;
+    justify-content: end;
+    gap: 4%;
+    width:50%;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* background-color:rgb(221, 40, 176); */
+}
+
+#header-line2-right-search-bar input{
+
+    border-radius: 5%;
+    width: 350px;
+    height: 30px;
+}
+
+#header-line2-right-cart{
+    display: flex;
+
+}
+
+#header-line2-right-cart img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+
+.header-line3{
+
+    /* background-color: blue; */
+    height: 50px;
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+/* this is code for navbar  */
+
+ul{
+    padding-bottom: 10px;
+    list-style: none;
+    background: #f2f2f2;
+    height: 20px;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    /* line-height: 21px; */
+    text-align: left;
+}
+ul li a{
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: #fff;
+    background: #939393;
+}
+ul li ul.dropdown{
+    min-width: 100%; /* Set width of the dropdown */
+    /* background: #cf2121; */
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+ul li:hover ul.dropdown{
+    display: block;	/* Display the dropdown */
+    /* background-color: red; */
+}
+ul li ul.dropdown li{
+    display: block;
+     background-color: white;
+}
+
+/* .dropdown{
+    background-color: red;
+} */

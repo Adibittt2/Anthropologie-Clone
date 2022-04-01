@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+    <style>
+
+        /* external css: flickity.css */
+
+/* * { box-sizing: border-box; }
+
+body { font-family: sans-serif; } */
+
+
+
+.carousel {
+  background: #EEE;
+  /* position: static; */
+}
+
+.carousel-cell {
+  width: 20%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  /* counter-increment: gallery-cell; */
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(gallery-cell); */
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+    </style>
+
+
+</head>
+<body>
+   
+  <div id="div_header"></div>
+
+    <!-- header ends -->
+
+    <div class="main">
+        <div class="main1">
+        <div class="main-left">
+           <div class="main-left1">
+            <img src="https://images.ctfassets.net/5de70he6op10/10y9Dkylm3sspNjpeTukyS/aedb7af5a4c5a1d43b81839e76034be1/032822_HPG_LS_M1.jpg?w=1756&q=80&fm=webp">
+            <p>Join us as we jetset to a stylish oasis, where the scene is serene and the fashion is fabulous.</p>
+            <a href="#">shop new arrivals</a>
+           </div>
+
+           <div class="main-left2">
+               <div class="main-left2-left">
+            <img src="https://images.ctfassets.net/5de70he6op10/5GA34Mmle3qAKR1fETKUmt/c7fb640d4cf93bcbac9fa79d1b0ae0bd/032822_HPG_2UP_Dresses.jpg?w=856&q=80&fm=webp">
+            <a href="#">shop dresses</a>
+            </div>
+
+            <div class="main-left2-right">
+                <img src="https://images.ctfassets.net/5de70he6op10/1Rw8xmfgBl9QyZZAOIDvhT/9f0efb952b1e1f25c3ddbb70017149b7/032822_HPG_2UP_Pants.jpg?w=856&q=80&fm=webp">
+                <a href="#">shop pants</a>
+                </div>
+           </div>
+
+           <div class="main-left3">
+            <img src="https://images.ctfassets.net/5de70he6op10/4XoXAqVShA2FD6slNRgzrr/a41b3bfd628e8759165a7887b58c30b7/032822_HPG_LS_M3.jpg?w=1756&q=80&fm=webp">
+            <p>Gather together around an artful arrangement of petals and pastels.</p>
+            <a href="#">shop spring entertaining essentials</a>
+           </div>
+
+        </div>
+        <div class="main-right">
+           
+            <div class="main-right1">
+
+                <img src="https://images.ctfassets.net/5de70he6op10/2yinSOHtTHa8vpb1SFeS8g/5ea8d49a0414d598e64bab98fda87775/032822_HPG_RR_Tops.jpg?w=856&q=80&fm=webp">
+                <a href="#">shop top</a>
+
+            </div>
+
+            <div class="main-right2">
+
+                <img src="https://images.ctfassets.net/5de70he6op10/48PzhyHLQgJJzF9zio7aYN/2201135623ddcfbaa54ee43bcbcc953b/032822_HPG_RR_Shoes.jpg?w=856&q=80&fm=webp">
+                <a href="#">shop shoes</a>
+
+            </div>
+
+            <div class="main-right3">
+
+                <img src="https://images.ctfassets.net/5de70he6op10/556TMeSWd7ABbRBVMMnCjB/52f2b4e9ab37f5815e7e51dadd32ac43/032822_HPG_RR_Candles.jpg?w=856&q=80&fm=webp">
+                <a href="#">shop candles</a>
+
+            </div>
+
+            
+            <div class="main-right4">
+
+                <img src="https://images.ctfassets.net/5de70he6op10/5PJWT8s235QzKq20dhKvfc/45a22099d24f1e02a3da1795a1779dc2/032822_HPG_RR_Furniture.jpg?w=856&q=80&fm=webp">
+                <a href="#">shop furniture</a>
+
+            </div>
+        </div>
+
+        </div>
+
+        <div class="main2">
+                <img src="https://images.ctfassets.net/5de70he6op10/5W9b4AVKI26Br3sWfqT74Y/4e196f2ce64b567bde9acfd71edfe295/032822_HPG_LS_M4.jpg?w=2694&q=80&fm=webp">
+                <p>Our latest dresses take you from sunny afternoon reveries to starlit evening memories.</p>
+                <a href="#">discover the dress journal</a>
+        </div>
+
+        <div class="main3">
+        <h2>Trending Now</h2>
+
+        <hr>
+
+        <!-- Flickity HTML init -->
+        <div class="carousel" data-flickity>
+          <div class="carousel-cell">
+             
+              <img src="https://images.urbndata.com/is/image/Anthropologie/42636704_089_b10?$an-category$&qlt=80&fit=constrain">
+              
+          </div>
+          <div class="carousel-cell">
+              <img src="https://images.urbndata.com/is/image/Anthropologie/37399649_010_b11?$an-category$&qlt=80&fit=constrain">
+          </div>
+          <div class="carousel-cell">
+            <img src="https://images.urbndata.com/is/image/Anthropologie/37659125_911_b10?$an-category$&qlt=80&fit=constrain">
+          </div>
+          <div class="carousel-cell">
+            <img src="https://images.urbndata.com/is/image/Anthropologie/68310572_080_b11?$an-category$&qlt=80&fit=constrain">
+          </div>
+          <div class="carousel-cell">
+            <img src="https://images.urbndata.com/is/image/Anthropologie/42184861_066_b2?$an-category$&qlt=80&fit=constrain">
+          </div>
+          <div class="carousel-cell">
+            <img src="https://images.urbndata.com/is/image/Anthropologie/55400204_013_b2?$an-category$&qlt=80&fit=constrain">
+          </div>
+        </div>
+
+        </div>
+
+        <div class="main4">
+            <h2>You may also like</h2>
+    
+            <hr>
+
+            <!-- Flickity HTML init -->
+            <div class="carousel" data-flickity>
+              <div class="carousel-cell">
+                 
+                  <img src="https://images.urbndata.com/is/image/Anthropologie/63039945_001_b2?$an-category$&qlt=80&fit=constrain">
+                  
+              </div>
+              <div class="carousel-cell">
+                  <img src="https://images.urbndata.com/is/image/Anthropologie/28760544_001_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/44348803_100_b5?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/52989944_007_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/44359032_027_b5?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/54311774_014_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/53941092_016_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/47089354_006_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+              <div class="carousel-cell">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/57875999_000_b2?$an-category$&qlt=80&fit=constrain">
+              </div>
+
+            </div>
+    
+            </div>
+
+            <div class="main5">
+
+                <h2>More to  Explore</h2>
+
+                <hr>
+                <div class="main5_1">
+
+                    <div class="main5_1_1">
+
+                        <img src="https://images.ctfassets.net/5de70he6op10/6IYxFArwDN8GzbXGvltcQF/8f6be61d5b7ba499e0265bca5f065a0f/032822_HPG_MTE_Getaway.jpg?w=856&q=80&fm=webp">
+
+                        <h2>Surf's Up!</h2>
+                        <p>The sun is shining, the sea is calling...what are you waiting for?
+                           </p>
+
+                        <a href="#"> visit the getaway shop</a>
+
+                    </div>
+
+                    <div class="main5_1_2">
+
+                        <img src="https://images.ctfassets.net/5de70he6op10/We2DgM75zY2FjM2qmPozV/b40e8f89d82777387d8ba6844d0142ae/MTE_GreaterGood.jpg?w=856&q=80&fm=webp">
+
+                        <h2>A Greater Good</h2>
+                        
+                        <p>Our priority: to be a force for good, a greater good, in better service of our planet, its people, and our products.
+                           </p>
+
+                        <a href="#">learn more about our journey</a>
+
+                    </div>
+
+                    <div class="main5_1_3">
+
+                        <img src="https://images.ctfassets.net/5de70he6op10/5Y7Kn8net4633rNpL8p4D6/82e71d4654e6af4f1e58b6a6d98ef1e1/MTE_SpringHomeJournal.jpg?w=856&q=80&fm=webp">
+
+                        <h2>Refreshed — Perspectives</h2>
+                        <p>As you consider your floor plans and furnishings, a tip from our interior experts: Begin with the tufted and textural.
+                           </p>
+
+                        <a href="#">
+                            shop the collection
+                            take the full house tour</a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="main6">
+
+                <hr>
+
+                <h1>About Us
+                     </h1>
+
+                <p>  Our mission at Anthropologie has always been to surprise and delight you with unexpected, distinctive finds for your closet and home. We source and craft all of our products with care, ensuring that any treasure you find at Anthropologie is unique, just like you. Explore our dress shop to find styles and fits perfect for any occasi...
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="main7">
+
+                <hr>
+
+                <div class="main7-1">
+                    <div class="main7-1-left">
+                        <h1>Sign Up for Email</h1>
+                        <p>Receive early access to new arrivals, sales, exclusive content, events and much more!</p>
+                    </div>
+
+                    
+                    <div class="main7-1-right">
+                        
+                        <h1> Email Address</h1>
+
+                        <div class="main7-1-right-1">
+                            <input style="margin:10px; width: 300px; height: 30px;" type="text">
+                            <button style="
+                            width: 120px;
+                            height: 33px;
+                            background-color: black;
+                            color:white;
+                            margin: 10px;">SUBMIT</button>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <p>By signing up, you will receive Anthropologie offers, promotions and other commercial messages. You are also agreeing to Anthropologie’s Privacy Policy. You may unsubscribe at any time.</p>
+            
+                <hr>
+
+            </div>
+
+            <div class="main8">
+
+                <div class="main8-1">
+
+                    <div>
+                        <h3>Help</h3>
+                        <p>Track YOur Order</p>
+                        <p>Start A Return Or Exchange(US)</p>
+                        <p>Returns & Exchanges</p>
+                        <p>Shipping</p>
+                        <p>Customer Service</p>
+                        <p>Current Promotions</p>
+                        <p>Product Recalls</p>
+                        <p>COVID-19 Update</p>
+                    </div>
+                    <div>
+                        <h3>About Us</h3>
+                        <p>Our Story</p>
+                        <p>Events</p>
+                        <p>A Greater Good</p>
+                        <p>Diversity & Inclusion</p>
+                    </div>
+
+                <div>
+                    <h3>Services</h3>
+                    <p>AnthroPerks</p>
+                    <p>Gift Cards</p>
+                    <p>Trade Membership</p>
+                    <p>Furniture Guides & Services</p>
+                    <p>Store Pickup & Collection Points</p>
+                </div>
+
+                <div>
+                    <h3>Connect</h3>
+                    <p>Contact Us</p>
+                    <p>Stay Connected</p>
+                    <p>Careers</p>
+                    <p>Styling Services</p>
+                    <p>Request A Catalog</p>
+                </div>
+
+                <div>
+                    <h2>Store Location</h2>
+                    <h2>Get Email</h2>
+                </div>
+
+                </div>
+
+                <div class="main8-2">
+
+                    <div style="display: flex; justify-content: center; gap: 10px;">
+                        <img 
+                       style="width: 100px; height: 50px;" src="https://images.ctfassets.net/5de70he6op10/4gWq1G4qLLgmqlNeHfzV2T/55298745127c36c5876f4013434c0c37/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917_Copy_2.svg">
+                        <img  style="width: 50px; height: 50px;" src="https://i.pinimg.com/originals/15/01/c0/1501c07ccee6c26a213a63becd20327b.jpg">
+                        <img  style="width: 50px; height: 50px;" src="https://www.pngitem.com/pimgs/m/82-821814_transparent-ig-png-blue-instagram-icon-png-png.png">
+                        <img  style="width: 50px; height: 50px;" src="https://www.nicepng.com/png/detail/825-8255248_follow-us-on-facebook-light-blue-facebook-icon.png">
+                        <img  style="width: 50px; height: 50px;" src="https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg">
+                    </div>
+
+                    <img style="margin-top: 50px; margin-bottom: 50px;"
+                    src="https://images.ctfassets.net/5de70he6op10/2Lh06CXT4AzVnj4LxvGsQD/a424e10a3b8c9e2e270dc22505bfbfa6/022421_SiteFooter_SMS_SIgnUp.jpg">
+
+
+                    <div style="display: flex; justify-content: center; gap: 10px;">
+                     <a href="#">US</a>
+                     <a href="#">France</a>
+                     <a href="#">Germany</a>
+                     <a href="#">UK</a>
+                    </div>
+
+                    <div style="display: flex; gap: 400px; margin-top: 30px;">
+
+                        <div style="display: flex; justify-content: left; gap: 10px;">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Use</a>
+                            <a href="#">CA Transparency</a>
+                            <a href="#">Accessibility</a>
+                            <a href="#">URBN.com</a>
+                            <a href="#">For CA residents</a>
+                           </div>
+
+                           <div>
+                               <p>2022 URBN.com. All Rights Reserved.</p>
+                           </div>
+
+                    </div>
+                </div>
+            </div>
+    
+       
+    </div>
+
+  
+</body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+<script type="module">
+
+    import header from "./header.js";
+
+    // var div_header = document.createElement("div");
+
+    var div_header = document.querySelector("#div_header");
+
+    div_header.innerHTML = header();
+
+    document.querySelector(".main-left1").addEventListener("click",entry);
+
+    function entry(){
+
+        window.location.href= "dress.html";
+    }
+
+    document.querySelector("#header-line2-right-cart").addEventListener("click",cart);
+
+    function cart(){
+
+        // alert(" sfs");
+        window.location.href= "cart.html";
+    }
+
+</script>
+
+</html>

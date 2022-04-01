@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dress.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <div id="div_header"></div>
+    <div class="main"></div>
+</body>
+<script type="module">
+
+    import header from "./header.js";
+
+    // var div_header = document.createElement("div");
+
+    var div_header = document.querySelector("#div_header");
+
+    div_header.innerHTML = header();
+
+var list = document.querySelector(".main");
+    
+var products = JSON.parse(localStorage.getItem("anth_products")) || [];
+ 
+var data_array = [
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4130652010037_035_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Maeve Sleeveless Scoop-Neck Mini Dress",
+price:"148"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4123342380002_038_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Glana Wide-Leg Pants",
+price:"500"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4110257230099_001_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Split-Front Longline Vest",
+price:"300"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/68928746_035_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Stateside One-Shoulder Twist Maxi Dress",
+price:"140"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4138652010008_001_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Maeve Textured Crop",
+price:"250"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4130920080015_038_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Hope For Flowers Striped Midi Dress",
+price:"180"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4130572540017_045_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Sleeveless Vest Mini Dress",
+price:"150"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4125650590033_009_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Maeve Knit Skort",
+price:"200"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4123339180025_060_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Maeve The Margot Cropped Kick Flare",
+price:"98"
+},
+{
+image:"https://images.urbndata.com/is/image/Anthropologie/4130210690116_009_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+title:"Eva Franco Tent Mini Dress",
+price:"170"
+},
+
+]
+
+var arr = data_array.forEach(func);
+
+
+function func(element,index,array){
+    
+   var div = document.createElement("div");
+ div.style.width = "300px";
+ div.style.height = "550px";
+ div.style.margin = "10px";
+ 
+
+ 
+  var img = document.createElement("img");
+  img.src = element.image;
+  img.style.width = "280px";
+  img.style.height = "350px";
+ 
+  var div2 = document.createElement("div");
+ 
+  var na = document.createElement("p");
+  na.textContent = element.title;
+  var pr = document.createElement("p");
+  pr.textContent = "Rs"  + element.price;
+ 
+ 
+  var div3 = document.createElement("div3");
+  var btn = document.createElement("button");
+ 
+  btn.textContent = "Add to Cart";
+   btn.addEventListener("click", fun_add);
+ 
+   function fun_add(){
+ 
+    var obj = {
+    "name": na.textContent,
+    "price": element.price,
+    "image": element.image,
+  }
+
+  products.push(obj);
+
+  localStorage.setItem("anth_products", JSON.stringify(products));
+
+  document.location.reload();
+
+//   localStorage.clear("anth_products");
+
+
+    //  var part1 = array.slice(0,index);
+    //  var part2 = array.slice(index+1,array.length);
+ 
+    //  part1 = part1.concat(part2);
+ 
+    //  localStorage.removeItem("products");
+    //  localStorage.setItem("products", JSON.stringify(part1));
+ 
+    //  data = JSON.parse(localStorage.getItem("products"));
+     
+    //  document.location.reload();
+ 
+   };
+ 
+  div2.append(na,pr);
+  div3.append(btn);
+ 
+ div.append(img,div2,div3);
+ list.append(div);
+ 
+};
+
+</script>
+<script type="module" src="./header_code.js"></script>
+</html>

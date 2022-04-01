@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="header.css">
+
+</head>
+<body>
+    <div id="div_header"></div>
+    <div class="main">
+
+        <div class="main-left">
+            <h1>Basket</h1>
+        </div>
+        <div class="main-right">
+
+            <div class="main-left1">
+                <h2>Order Summary</h2>
+            </div>
+            
+            <div style="border: 2px solid grey; padding: 3%;">
+            <div class="main-left2">
+
+                <div
+                style="display: flex; gap: 280px;"
+                >
+
+                    <h4>Subtotal</h4>
+                    <h4 id="price">490</h4>
+                </div>
+
+                <div
+                style="display: flex; gap: 285px;"
+                >
+
+                    <h4>Shipping</h4>
+                    <h4>00</h4>
+                </div>
+
+                <div
+                style="display: flex; gap: 245px;"
+                >
+
+                    <h4>Estimated Tax</h4>
+                    <h4>00</h4>
+                </div>
+
+                <div
+                style="display: flex; gap: 280px;
+                padding-right: 5px;">
+
+                    <h3><b>Total</b></h3>
+                    <h3 id="total_price"><b>00</b></h3>
+                </div>
+
+                <div class="main-left3">
+
+                    <p>Or 4 interest-free installments of $60.00 with <b>afterpay</b></p>
+                </div>
+
+                <div class="main-left4">
+                   <div> <button id="main-left4-btn1">PROCEED TO CHECKOUT</button></div>
+                     <div id="main-left4-btn2">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png">
+                     </div>
+                  
+                </div>
+            
+            </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="module">
+
+    import header from "./header.js";
+
+    // var div_header = document.createElement("div");
+
+    var div_header = document.querySelector("#div_header");
+
+    div_header.innerHTML = header();
+
+var list = document.querySelector(".main-left");
+
+var  cart_item = JSON.parse(localStorage.getItem("anth_products"));
+var sum =0;
+for(var i=0; i<cart_item.length; i++){
+
+    sum += (Number)(cart_item[i].price);
+}
+// console.log(cart_item.price[0]);
+
+
+var arr = cart_item.forEach(func);
+
+// console.log(cart_item[0].price);
+function func(element,index,array){
+    
+   var div = document.createElement("div");
+ div.style.width = "90%";
+ div.style.height = "150px";
+ div.style.margin = "10px";
+ div.style.padding = "10px";
+ div.style.display = "flex";
+ div.style.gap = "60px";
+ div.style.border = "1px solid green";
+
+ 
+
+ 
+  var img = document.createElement("img");
+  img.src = element.image;
+  img.style.width = "380px";
+  img.style.height = "150px";
+ 
+  var div2 = document.createElement("div");
+  div2.style.display = "flex";
+ div2.style.gap = "100px";
+ div2.style.padding = "7%";
+ 
+  var na = document.createElement("p");
+  na.textContent = element.name;
+  na.style.width ="200px";
+  var pr = document.createElement("p");
+  pr.textContent = "Rs" + element.price;
+ 
+ 
+  var div3 = document.createElement("div3");
+  div3.style.padding = "7%";
+  var btn = document.createElement("button");
+ 
+  btn.textContent = "Remove";
+  btn.style.width = "100px";
+   btn.addEventListener("click", fun_add);
+ 
+   function fun_add(){
+ 
+//     obj = {
+//     "name": na.textContent,
+//     "price": pr.textContent,
+//     "image": element.image,
+//   }
+
+//   products.push(obj);
+
+//   localStorage.setItem("anth_products", JSON.stringify(products));
+
+
+
+
+     var part1 = cart_item.slice(0,index);
+     var part2 = cart_item.slice(index+1,cart_item.length);
+ 
+     part1 = part1.concat(part2);
+ 
+     localStorage.removeItem("anth_products");
+     localStorage.setItem("anth_products", JSON.stringify(part1));
+ 
+    //  data = JSON.parse(localStorage.getItem("products"));
+     
+     document.location.reload();
+ 
+   };
+ 
+  div2.append(na,pr);
+  div3.append(btn);
+ 
+ div.append(img,div2,div3);
+ list.append(div);
+
+//  sum +=element.price;
+
+//  price.innerHTML = sum;
+
+};
+
+
+var price = document.querySelector("#price");
+var total_price = document.querySelector("#total_price");
+
+price.innerHTML = (Number)(sum);
+total_price.innerHTML = (Number)(sum);
+
+document.querySelector("#main-left4-btn1").addEventListener("click",checkout);
+
+function checkout(){
+
+    alert("Your Order is ready to Checkout");
+}
+
+
+</script>
+
+<script type="module" src="./header_code.js"></script>
+
+</html>
